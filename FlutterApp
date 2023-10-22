@@ -78,3 +78,5 @@ class _TaskManagerState extends State<TaskManager> {
     );
   }
 }
+
+Unable to find suitable Visual Studio toolchain. Please run `flutter doctor` for more details.
