@@ -1,0 +1,80 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'ToDo List App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: ToDoList(),
+    );
+  }
+}
+
+class ToDoList extends StatefulWidget {
+  @override
+  _ToDoListState createState() => _ToDoListState();
+}
+
+class _ToDoListState extends State<ToDoList> {
+  List<String> tasks = [];
+  TextEditingController taskController = TextEditingController();
+
+  void addTask() {
+    setState(() {
+      String newTask = taskController.text;
+      if (newTask.isNotEmpty) {
+        tasks.add(newTask);
+        taskController.clear();
+      }
+    });
+  }
+
+  void removeTask(int index) {
+    setState(() {
+      tasks.removeAt(index);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('ToDo List'),
+      ),
+      body: Column(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: TextField(
+              controller: taskController,
+              decoration: InputDecoration(labelText: 'Dodaj nowe zadanie'),
+            ),
+          ),
+          RaisedButton(
+            onPressed: addTask,
+            child: Text('Dodaj zadanie'),
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: tasks.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Text(tasks[index]),
+                  trailing: IconButton(
+                    icon: Icon(Icons.delete),
+                    onPressed: () => removeTask(index),
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
