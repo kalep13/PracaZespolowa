@@ -32,24 +32,24 @@ Korzystaj z frameworka Flutter do budowania aplikacji wieloplatformowych (iOS i 
 
 Wybierz lub stwórz bazę danych, która będzie przechowywać informacje o nawykach użytkowników. Popularnym wyborem jest Firebase lub SQLite.
 
-Autoryzacja i Logowanie:
+6. Autoryzacja i Logowanie:
 
 Zaimplementuj system autoryzacji, aby użytkownicy mogli się logować i synchronizować swoje dane między urządzeniami.
 
-6. Testowanie:
+7. Testowanie:
 
 Przeprowadź testy jednostkowe, integracyjne i testy użytkownika (UI) w celu wykrycia i naprawienia błędów.
 
-7. Optymalizacja i Wydajność:
+8. Optymalizacja i Wydajność:
 
 Zoptymalizuj kod, aby aplikacja działała płynnie i była wydajna.
 
-8. Publikacja Aplikacji:
+9. Publikacja Aplikacji:
 
 Przygotuj ikony, opisy i grafiki dla Twojej aplikacji.
 Opublikuj aplikację w sklepach aplikacji, takich jak Google Play Store i Apple App Store.
 
-9. Wsparcie i Aktualizacje:
+10. Wsparcie i Aktualizacje:
 
 Monitoruj działanie aplikacji i reaguj na opinie użytkowników.
 Regularnie aktualizuj aplikację, dodając nowe funkcje i poprawiając błędy
