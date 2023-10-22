@@ -6,21 +6,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ToDo List App',
+      title: 'Task Manager',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ToDoList(),
+      home: TaskManager(),
     );
   }
 }
 
-class ToDoList extends StatefulWidget {
+class TaskManager extends StatefulWidget {
   @override
-  _ToDoListState createState() => _ToDoListState();
+  _TaskManagerState createState() => _TaskManagerState();
 }
 
-class _ToDoListState extends State<ToDoList> {
+class _TaskManagerState extends State<TaskManager> {
   List<String> tasks = [];
   TextEditingController taskController = TextEditingController();
 
@@ -44,7 +44,7 @@ class _ToDoListState extends State<ToDoList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ToDo List'),
+        title: Text('Task Manager'),
       ),
       body: Column(
         children: <Widget>[
@@ -55,7 +55,7 @@ class _ToDoListState extends State<ToDoList> {
               decoration: InputDecoration(labelText: 'Dodaj nowe zadanie'),
             ),
           ),
-          RaisedButton(
+          ElevatedButton(
             onPressed: addTask,
             child: Text('Dodaj zadanie'),
           ),
